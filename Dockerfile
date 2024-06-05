@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:18
+FROM node:latest
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -17,7 +17,7 @@ WORKDIR /app/uptime-kuma
 RUN npm run setup
 
 # Expose the port the app runs on
-EXPOSE 8001
+EXPOSE 3001
 
 # Command to run the application
 CMD ["node", "server/server.js"]
